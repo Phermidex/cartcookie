@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Labs code</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class="center-align">Cookie item Manager</h1>
+		<hr>
+		 <div class="row">
+		 	<div class="col s12">
+		 		<button id="clearall" class="btn deep-orange darken-4">CLEAR ALL</button>
+		 		<br>
+		 		<div class="msj-cartEvent grey darken-4 center"></div>
+		 	</div>
+    <div class="col s12 m6">
+      <div class="card grey lighten-5">
+        <div class="card-content black-text">
+          <span class="card-title">Example cookie</span>
+          <p class="red-text">In this example we will use session cookies. with the goal of using json within them.</p>
+        </div>
+        <div class="card-action">
+          <button id="addcartck" data-productid="1" data-distributid="2" data-productname="Test" class="btn  green darken-3"><i class="fa fa-plus"></i></button>
+          <button id="clear" data-productid="1"  class="btn deep-orange darken-4"><i class="fa fa-minus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6">
+      <div class="card grey lighten-5">
+        <div class="card-content black-text">
+          <span class="card-title">Example cookie</span>
+          <p class="red-text">In this example we will use session cookies. with the goal of using json within them.</p>
+        </div>
+        <div class="card-action">
+          <button id="addcartck" data-productid="2" data-distributid="2" data-productname="Test" class="btn  green darken-3"><i class="fa fa-plus"></i></button>
+          <button id="clear" data-productid="2" class="btn deep-orange darken-4"><i class="fa fa-minus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6">
+      <div class="card grey lighten-5">
+        <div class="card-content black-text">
+          <span class="card-title">Example cookie</span>
+          <p class="red-text">In this example we will use session cookies. with the goal of using json within them.</p>
+        </div>
+        <div class="card-action">
+          <button id="addcartck" data-productid="3" data-distributid="2" data-productname="Test" class="btn  green darken-3"><i class="fa fa-plus"></i></button>
+          <button id="clear" data-productid="3" class="btn deep-orange darken-4"><i class="fa fa-minus"></i></button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col s12 m6">
+      <div class="card grey lighten-5">
+        <div class="card-content black-text">
+          <span class="card-title">Example cookie</span>
+          <p class="red-text">In this example we will use session cookies. with the goal of using json within them.</p>
+        </div>
+        <div class="card-action">
+          <button id="addcartck" data-productid="4" data-distributid="2" data-productname="Test" class="btn  green darken-3"><i class="fa fa-plus"></i></button>
+          <button id="clear" data-productid="4" class="btn deep-orange darken-4"><i class="fa fa-minus"></i></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="col s12">
+  			<div class="grey lighten-2 respons"></div>
+  			<hr>
+  			<h6>Required to run:</h6>
+  	        <div class="grey lighten-2">
+  	        	<p style="padding: 5px 5px 5px 5px; color: red;" class="grey lighten-2">jQuery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js</p>
+				<p style="padding: 5px 5px 5px 5px; color: red;" class="grey lighten-2">Cookiejs: https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js</p>
+  	        </div>
+		 		<hr>
+		 		<h6 class="center-align">Developed by Minnek Digital Studio development department.</h6>
+		 	</div>
+		
+	</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="itemscookieput.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	     console.log(get_countItems());
+
+	     //Function custom
+	     function customTest(quanty = 1)
+	     {
+	     	if (get_countItems() > quanty) {
+	     		$('.respons').html('<p class="black-text">If quantity is greater than one, we show this message.</p>');
+	     	}
+	     }
+
+	     //run
+	     customTest();
+
+    });
+</script>
+</html>
